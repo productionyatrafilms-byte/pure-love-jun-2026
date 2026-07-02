@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: "Inter", sans-serif; */
+}
+
+@font-face {
+  font-family: "customFont";
+  src: url("./fonts/baloo.regular.ttf");
+  
+}
+@font-face {
+  font-family: "hindi";
+  src: url("./fonts/ITFDevanagari.ttc");
+  /* src: url("./fonts/ITFDevanagari.ttc"); */
+}
+
+@font-face {
+  font-family: "gujratiFont";
+  src: url("./fonts/NotoSansGujarati-Bold.ttf");
+ 
+}
+
+html,
+body {
+    width: 100%;
+    height: 100hv;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('assets/img/bgAsset\ 76\ \(1\).png');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+nav {
+    width: 94%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1.2vh 2vw;
+    z-index: 10;
+}
+
+.translate-button-container {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7vw;
+    background-color: #4a51ab;
+    border-radius: 3vw;
+    padding: 0.6vw 0.7vw;
+    height: 2.9vw;
+}
+
+.translate-button {
+    background-color: white;
+    border: 0.2vw solid black;
+    border-radius: 2vw;
+    width: 2vw;
+    height: 2vw;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    font-size: 1vw;
+    font-weight: bold;
+    color: black;
+
+}
+
+.translate-button:hover {
+    transform: scale(1.15);
+}
+
+.container h1 {
+    font-size: 7vw;
+    font-weight: 800;
+    line-height: 7vw;
+    text-align: center;
+    color: #4a51ab;
+}
+
+.container h2 {
+    font-size: 7vw;
+    line-height: 7vw;
+    font-weight: 800;
+    color: #50c1ae;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.3);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.heart img {
+    width: 5vw;
+    margin-top: 4vw;
+    transition: all ease 0.5s;
+    cursor: pointer;
+    animation: heartbeat 3s ease infinite;
+}
+
+.heart img:hover {
+    scale: 1.5;
+}
+
+.clouds {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.clouds img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}

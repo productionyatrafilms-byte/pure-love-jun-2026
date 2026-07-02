@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    width: 98vw;
+    padding: 1vw;
+    position: absolute;
+    z-index: 99;
+    top: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+nav i{
+    line-height: 0px;
+}
+
+.translate-button-container {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7vw;
+    background-color: #4a51ab;
+    border-radius: 3vw;
+    padding: 0.6vw 0.7vw;
+    height: 2.9vw;
+}
+
+.translate-button {
+    background-color: white;
+    border: 0.2vw solid black;
+    border-radius: 2vw;
+    width: 2vw;
+    height: 2vw;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    font-size: 1vw;
+    font-weight: bold;
+    color: black;
+    transition: transform 0.2s ease;
+}
+
+nav i {
+    font-size: 3vw;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+nav img {
+    width: 5vw;
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
+
+nav i:hover {
+    scale: 1.2;
+}
+
+.langbtn img {
+    width: 7vw;
+    position: absolute;
+    right: 1%;
+}
+
+.langbtn .hin {
+    display: none;
+}
+
+main {
+   height: auto !important;
+  min-height: 100vh !important;
+    background: rgb(81,136,235);
+    background: linear-gradient(90deg, rgba(81,136,235,1) 0%, rgba(81,219,235,1) 49%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+main img {
+    width: 40vw;
+}
+
+h1 {
+    position: absolute;
+    bottom: 13.5%;
+    left: 48.5%;
+    color: #86107B;
+}
+
+
+main img {
+    width: 40vw;
+}
+
+.main-container{
+    position: relative;
+    line-height: 0px;
+}
+
+main img:nth-child(2) {
+    width: 11vw;
+    position: absolute;
+    /* position: relative; */
+    bottom: 0%;
+    /* left: -20%; */
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: unset !important;
+    cursor: pointer;
+}
+

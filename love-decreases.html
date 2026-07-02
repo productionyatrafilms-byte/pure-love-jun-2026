@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="love-decreases.css">
+    <style>
+      .home-btn {
+        position: fixed;
+        top: 1.5vw;
+        left: 8vw;
+        width: 3vw;
+        opacity: 1;
+        visibility: visible;
+        z-index: 1000;
+      }
+      .home-btn img {
+        width: 100%;
+        object-fit: contain;
+        display: block;
+      }
+    </style>
+</head>
+
+<body>
+    <a class="home-btn" href="topics.html">
+      <img src="./assets/img/home clickAsset 5.png" alt="" />
+    </a>
+    <a href="javascript:void(0)" class="title" onclick="scrollToContainer()">
+        <p class="t5"></p>
+    </a>
+    <nav>
+        <div class="translate-button-container">
+            <div class="translate-button" id="englishButton">E</div>
+            <div class="translate-button" id="hindiButton">H</div>
+            <div class="translate-button" id="gujaratiButton">G</div>
+        </div>
+    </nav>
+    <img class="image1" src="./assets/img/love_decreases_bg.png" alt="">
+    <img class="image2" src="./assets/img/love_decreases_cloud.png" alt="">
+    <img class="image3" src="./assets/img/love_decreases_line.png" alt="">
+
+    <div class="container" id="container">
+        <img src="./assets/img/love_decreases_img.png" alt="">
+        <p class="decrease"></p>
+    </div>
+
+    <script>
+        const englishButton = document.getElementById("englishButton");
+        const hindiButton = document.getElementById("hindiButton");
+        const gujaratiButton = document.getElementById("gujaratiButton");
+        const title = document.querySelector(".title");
+
+        let data = {};
+
+        // Load JSON data
+        async function loadTranslations() {
+            try {
+                const response = await fetch("./json/data.json");
+                data = await response.json();
+
+                // Default Language
+                changeLanguage("English");
+            } catch (error) {
+                console.error("Error loading translations:", error);
+            }
+        }
+
+        // Change Language
+        function changeLanguage(language) {
+            document.querySelector(".t5").textContent =
+                data[language]?.t5 || "";
+
+            document.querySelector(".decrease").textContent =
+                data[language]?.decrease || "";
+        }
+
+        // Smooth scroll to container
+        function scrollToContainer(event) {
+            event.preventDefault();
+
+            document.querySelector(".container").scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }
+
+        // Language button events
+        englishButton.addEventListener("click", () => {
+            changeLanguage("English");
+        });
+
+        hindiButton.addEventListener("click", () => {
+            changeLanguage("Hindi");
+        });
+
+        gujaratiButton.addEventListener("click", () => {
+            changeLanguage("Gujrati");
+        });
+
+        // Title click event
+        title.addEventListener("click", scrollToContainer);
+
+        // Load translations on page load
+        loadTranslations();
+    </script>
+    <script src="djp.js"></script>
+</body>
+
+</html>

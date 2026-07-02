@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>unconditional love</title>
+
+    <link rel="stylesheet" href="uncon.css" />
+    <style>
+      .home-btn {
+        position: fixed;
+        top: 1.5vw;
+        left: 8vw;
+        width: 3vw;
+        opacity: 1;
+        visibility: visible;
+        z-index: 1000;
+      }
+      .home-btn img {
+        width: 100%;
+        object-fit: contain;
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="home-btn" href="topics.html">
+      <img src="./assets/img/home clickAsset 5.png" alt="" />
+    </a>
+    <nav>
+      <div class="translate-button-container">
+        <div class="translate-button" id="englishButton">E</div>
+        <div class="translate-button" id="hindiButton">H</div>
+        <div class="translate-button" id="gujaratiButton">G</div>
+      </div>
+    </nav>
+
+    <main>
+      <img class="img1" src="assets/img/bg_cloud.webp" alt="" />
+      <img class="img2" src="assets/img/line.png" alt="" />
+      <img class="img3" src="assets/img/uncon_artborad.png" alt="" />
+
+      <h1>is <br />your love <br />unconditional ?</h1>
+
+      <p class="t1">
+        You pray to god that your wish be fulfilled, but your wish is not
+        fulfilled.
+      </p>
+      <p class="t2">
+        Guru Bhagwant tells you to stop doing something which you like very
+        much.
+      </p>
+      <p class="t3">
+        Your sibling does not share his toys with you even though you share
+        yours with him.
+      </p>
+      <p class="t4">Your friend takes your belongings without asking you.</p>
+      <p class="t5">
+        Even after completing your homework, your Parents don’t let you play.
+      </p>
+      <p class="t6">
+        Your friend accidentally pushed you & you fell down. He did not
+        apologize for his act.
+      </p>
+      <p class="t7">
+        Teacher does not appreciate you even if you scored highest.
+      </p>
+      <p class="t8">
+        Your father does not buy you the toy of your choice even after multiple
+        request.
+      </p>
+      <p class="t9">Will your love for everyone decrease?</p>
+
+      <img
+        id="videobtn"
+        src="assets/img/videobtn_eng.png"
+        class="pop-animation"
+        onclick="openvideo()"
+        alt=""
+      />
+    </main>
+
+    <div class="video-wrapper hidden">
+      <span onclick="closevideo1()">&times;</span>
+      <video controls src=""></video>
+    </div>
+
+    <span class="num1">1</span>
+    <span class="num2">2</span>
+    <span class="num3">3</span>
+    <span class="num4">4</span>
+    <span class="num5">5</span>
+    <span class="num6">6</span>
+    <span class="num7">7</span>
+    <span class="num8">8</span>
+    <span class="num9">9</span>
+
+    <script src="uncon.js"></script>
+    <script src="djp.js"></script>
+  </body>
+</html>
