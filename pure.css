@@ -108,7 +108,7 @@ body {
 
 body {
     /* background-image: url(assets/img/bg\ option\ pg\ without\ hart\ Artboard\ 1\ copy\ 2.png); */
-    background-image: url(assets/img/bg\ option\ pg\ without\ hart\ Artboard\ 1\ copy\ 2.webp);
+    background-image: url(assets/img/pure_love_bg.png);
     background-position: center;
     background-size: cover;
 }
@@ -187,6 +187,7 @@ main .img3 {
 
 main .img2 {
     width: 100%;
+    margin:0 auto;
 }
 
 main .img3 {

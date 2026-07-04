@@ -5,6 +5,7 @@ tl.from(".sheartr", { y: "-100%", duration: 2 }, "a");
 tl.from(".bheartl", { y: "-100%", duration: 2 }, "a");
 tl.from(".bheartr", { y: "-100%", duration: 2 }, "a");
 tl.from(".middle", { y: "-100%", duration: 2 }, "a");
+tl.from(".example", { y: "-100%", duration: 2 }, "a");
 
 tl.to("p", {
   opacity: 1,
@@ -93,6 +94,7 @@ function updateText(language) {
       document.querySelector(".t3").textContent = langData.t3 || "";
       document.querySelector(".t4").textContent = langData.t4 || "";
       document.querySelector(".t5").textContent = langData.t5 || "";
+      document.querySelector(".t6").textContent = langData.t6 || "";
       document.querySelector(".define").textContent = langData.define || "";
     })
     .catch((error) => console.error("Error fetching data:", error));
